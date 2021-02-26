@@ -1,0 +1,15 @@
+#
+# Davicom device configuration
+#
+
+config DM9000C
+	tristate "DM9000C support"
+	depends on ARM || BLACKFIN || MIPS
+	select CRC32
+	select NET_CORE
+	select MII
+	---help---
+	  Support for DM9000C chipset.
+
+	  To compile this driver as a module, choose M here.  The module
+	  will be called DM9000C.
